@@ -4,6 +4,13 @@ const app = Vue.createApp({
   // component template can be specified here
   //  creating a template property
   //template: "<h2>I am the template</h2>",
+  data() {
+    return {
+      title: "The Final Empire",
+      author: "Brandon Sanderson",
+      age: 45,
+    };
+  },
 });
 
 // mounting is the process of outputting the virtual
