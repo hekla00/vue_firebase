@@ -11,6 +11,11 @@ const app = Vue.createApp({
       age: 45,
     };
   },
+  methods: {
+    changeTitle(title) {
+      this.title = title;
+    },
+  },
 });
 
 // mounting is the process of outputting the virtual

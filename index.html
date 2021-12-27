@@ -10,6 +10,11 @@
     <h1>Hello, Vue :)</h1>
     <div id="app">
       <p>{{ title }} - {{ author }} - {{ age }}</p>
+      <!--v-on allows us to react to different types of events-->
+      <!--v-on: can be written as @-->
+      <button v-on:click="age++">Increase age</button>
+      <button @click="age--">Decrease age</button>
+      <div @click="changeTitle('Oathbringer')">Change title</div>
     </div>
     <script src="app.js"></script>
   </body>
