@@ -9,12 +9,15 @@
   <body>
     <h1>Hello, Vue :)</h1>
     <div id="app">
-      <p>{{ title }} - {{ author }} - {{ age }}</p>
-      <!--v-on allows us to react to different types of events-->
-      <!--v-on: can be written as @-->
-      <button v-on:click="age++">Increase age</button>
-      <button @click="age--">Decrease age</button>
-      <div @click="changeTitle('Oathbringer')">Change title</div>
+      <div v-if="showBooks">
+        <p>{{ title }} - {{ author }} - {{ age }}</p>
+      </div>
+      <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide Books</span>
+        <span v-else>Show Books</span>
+      </button>
+
+      <div v-show="showBooks">Currently showing books</div>
     </div>
     <script src="app.js"></script>
   </body>
